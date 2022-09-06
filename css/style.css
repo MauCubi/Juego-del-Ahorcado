@@ -1,0 +1,220 @@
+header{
+    background-color: rgb(26, 26, 26);
+    height: 70px;
+    
+}
+
+header img{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    
+}
+
+header div{
+    text-align: center;
+}
+
+#titulo-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(184, 184, 184);
+    position: relative;
+    display: inline-block;
+    
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+#area-mensaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 50px;    
+    font-size: 30px;
+    text-align: center;
+}
+
+#area-ahorcado{
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+#area-letras{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+#raya1{    
+    display: inline-block;
+    width: 50px;
+    height: 52px;
+    text-align: center;
+    font-size: 50px;
+    border-bottom: 2px solid black;
+    width: 60px;
+
+}
+
+.espacio-letra{    
+    display: inline-block;
+    margin: 0 5px;    
+    width: 50px;
+    height: 52px;
+    text-align: center;
+    font-size: 50px;
+    border-bottom: 2px solid black;
+      
+}
+
+#area-presionadas{
+    margin: 20PX;
+    color: rgb(148, 148, 148);
+    font-size: 30px;
+    text-align: center;
+    height: 30px;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+
+.btn{
+    margin: 0 10px;
+    width: 250px;
+	cursor: pointer;
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif; font-weight:400;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;     
+         transition: all .4s ease-in-out;
+}
+
+.btn-dark{
+    border:solid 2px #1f1f1f;
+    background: transparent;
+    color: #1f1f1f;
+}
+
+.btn-dark:hover,
+.btn-dark.active{
+    border:solid 2px #1f1f1f;
+    background: #1f1f1f;
+    color: #fff;
+}
+
+#menu, #agregar-palabras{    
+    display: none;
+    width: 100%;
+    height: 602px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#menu{
+    display: flex;
+}
+
+#ng, #ap{
+    display: inline-block;
+    height: 90px;
+    width: 250px;
+    margin: 15px;
+}
+
+.input-palabra input{
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif; font-weight:400;
+    background-color: rgb(255, 255, 232);
+    
+    
+}
+
+#lista-palabras{
+    margin: 25px;    
+    font-size: 20px;    
+    width: 95%;    
+}
+
+h1{
+    font-size: 30px;    
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#parrafo-palabras{
+    margin-top: 25px;
+    text-align: left;
+    align-self: flex-start;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#add{
+    width: 190px;
+    font-size:15px ;
+}
+
+
+
+
+
+/* PIE DE PAGINA */
+footer{    
+    display: flex;
+    background-color:#1d211c;
+    padding: 25px 0;
+    font-size:15px;    
+    color:#737373;
+    text-align: center;
+}
+
+.pie-imagen{
+    align-self: flex-start;
+    width: 10%;
+    
+}
+
+
+.copyright{
+    width: 70%;    
+    color: white;    
+    font-size: 17px;   
+          
+}
+
+.pie-socials{
+    display: inline-block;     
+    margin-top: 2%;  
+    
+}
+
+.pie-socials ul li{
+    display: inline-block;    
+    margin: 0 15px;
+}
+
+
+@media screen and (max-width:480px) {
+
+}

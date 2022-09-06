@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/a2a09fc638.js" crossorigin="anonymous"></script>
+
+
+    <link rel="shortcut icon" href="img/icon.png">
+    <title>Juego del ahorcado</title>
+</head>
+
+<body id="cuerpo">
+
+    <!-- CABECERO -->
+    <header>
+        <img src="./img/logo2.png" alt="">
+        <div><h1 id="titulo-header">Challenge 2 - Juego del ahorcado</h1></div>        
+    </header>
+
+    <!-- AREA DEL JUEGO -->
+    <div id="juego" hidden>    
+        <div id="area-mensaje">
+            
+        </div>
+        <div id="area-ahorcado">
+            <canvas id="ahorcado" width="294" height="360" style="background-color:rgb(255, 255, 255) ;"></canvas>        
+        </div>    
+
+        <div id="area-letras"></div>
+        <div id="area-presionadas"></div>
+        
+        <div class="botones">
+            <button class="btn btn-dark" onclick="nuevoJuego()">Nuevo Juego</button>
+            <button class="btn btn-dark" onclick="volverMenu()">Desistir</button>    
+        </div>        
+    </div>
+
+
+    <!-- MENU PRINCIPAL -->
+    <div id="menu">
+        <button class="btn btn-dark" id="ng" onclick="nuevoJuego()">Nuevo Juego</button>
+
+        <button class="btn btn-dark" id="ap" onclick="menuAgregarPalabra()">Agregar Palabras</button>
+
+    </div>
+
+
+    <!-- AREA DE AGREGAR PALABRAS -->
+    <div id="agregar-palabras">        
+        <div class="input-palabra">
+            <input id="word" type="text" placeholder="Ingrese palabra" maxlength="8" onkeydown="return /[a-z\-]/i.test(event.key)">
+            <button class="btn btn-dark" id="add" onclick="agregarPalabra()" >+ Agregar</button>
+        </div>
+
+        <button class="btn btn-dark" id="ap" onclick="volverMenu()">Volver al menu</button>
+
+        <hr style="width: 95%;">
+        
+        <div id="lista-palabras" style="text-align:center;">
+            <h1>Lista de Palabras</h1>
+            <p id="parrafo-palabras"></p>
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer class="pie-pagina">         
+        <div class="pie-imagen">
+            <img src="img/logo-aluraespanhol.png" alt="">
+        </div>        
+        <div class="copyright">            
+            <p  style="color:rgb(198, 198, 198) ;"> &copy; Mauro Rogelio Cubilla - Oracle Next Education 2022</p>
+            <div class="pie-socials">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/mauro-rogelio-cubilla-526a67240/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color:rgb(198, 198, 198);"></i></a></li>
+                <li><a href="https://github.com/MauCubi?tab=repositories" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color:rgb(198, 198, 198);"></i></a></li>
+                <li><a href="https://app.aluracursos.com/user/ma-cubi90" target="_blank"><i class="fa-solid fa-a fa-2xl" style="color:rgb(198, 198, 198);" ></i></li>                    
+            </ul>
+            </div>
+        </div> 
+
+
+
+
+<script src="./js/logica.js"></script>
+
+
+<script>
+
+
+</script>
+</body>
+</html>
