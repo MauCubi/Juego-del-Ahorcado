@@ -219,6 +219,7 @@ function agregarPalabra(){
         listaPalabras.push(word.value.toUpperCase());
         mostrarPalabrasAlmacenadas();
         word.value = '';
+        word.focus();
     }
 }
 
