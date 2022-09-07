@@ -20,6 +20,12 @@ const listaPalabras = ['PERRO', 'GATO', 'AUTO', 'MONITOR', 'CASA', 'CONTROL', 'C
 const cuerpo = document.getElementById('cuerpo');
 cuerpo.addEventListener('keypress', verificarTecla);
 
+// Configuracion de eventos a botones de pantalla tactil
+const botones = document.getElementsByClassName('myButton');
+for (let index = 0; index < botones.length; index++) {    
+    botones[index].addEventListener('click', verificarTactil, false);    
+}
+
 const word = document.getElementById('word');
 word.addEventListener('paste', e => e.preventDefault());
 
@@ -92,6 +98,59 @@ function verificarTecla(e){
                     contador ++;
                     dibujar(contador);
                     document.getElementById('area-presionadas').innerHTML += e.key.toUpperCase() + ', ';
+                    
+                    if (contador == limite) {
+                        document.getElementById('area-mensaje').style.color = 'red';
+                        document.getElementById('area-mensaje').innerHTML = 'Lástima, has perdido';
+                        finJuego = true;
+
+                        for (let i = 0; i < palabraEscrita.length; i++) {
+                            if (palabraEscrita[i] == '_') {                                                           
+                                let letrita = document.getElementById(`letra${i}`);
+                                letrita.insertAdjacentHTML('beforeend', arrayString[i]);
+                                letrita.style.color = 'red';
+                            }      
+                        }
+                }
+                }
+                
+            }
+            
+        }
+
+    }
+
+}
+
+
+
+
+// Controla letra presionada se encuentra en la palabra
+function verificarTactil(e){    
+    if (!finJuego) {       
+        
+        if (alfabeto.includes(e.currentTarget.value.toUpperCase())) {                           
+            if (!letrasPresionadas.includes(e.currentTarget.value.toUpperCase())) {
+                letrasPresionadas.push(e.currentTarget.value.toUpperCase());
+
+                if (arrayString.includes(e.currentTarget.value.toUpperCase())) {                                           
+                    for (let i = 0; i < arrayString.length; i++) {
+                        if (arrayString[i] == e.currentTarget.value.toUpperCase()) {
+                            palabraEscrita[i] = e.currentTarget.value.toUpperCase();                            
+                            document.getElementById(`letra${i}`).insertAdjacentHTML('beforeend', e.currentTarget.value.toUpperCase());                          
+                            
+                        }                 
+                        
+                    }
+                    if (palabraEscrita.toString() == arrayString.toString() ) {
+                        document.getElementById('area-mensaje').style.color = '#00b200';
+                        document.getElementById('area-mensaje').innerHTML = 'Felicidades, has ganado';
+                        finJuego = true;
+                    }
+                } else {                    
+                    contador ++;
+                    dibujar(contador);
+                    document.getElementById('area-presionadas').innerHTML += e.currentTarget.value.toUpperCase() + ', ';
                     
                     if (contador == limite) {
                         document.getElementById('area-mensaje').style.color = 'red';
