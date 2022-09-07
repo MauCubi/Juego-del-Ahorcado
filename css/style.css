@@ -278,13 +278,15 @@ footer{
         text-decoration:none;
         text-shadow:0px 1px 0px #e1e2ed;
     }
-    .myButton:hover {
+    /* .myButton:hover {
         background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
         background-color:#bab1ba;
-    }
+    } */
     .myButton:active {
         position:relative;
         top:1px;
+        background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+        background-color:#bab1ba;
     }
     
 }
