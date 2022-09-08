@@ -223,7 +223,9 @@ footer{
 }
 
 
-@media screen and (max-width:480px) {
+
+
+@media screen and (max-width:480px) and (max-width:960px) {
     header img{
         display: none;
     }
