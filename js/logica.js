@@ -269,12 +269,22 @@ function menuAgregarPalabra(){
 }
 
 function agregarPalabra(){
-    if (word.value == '') {
+    let flag = true;
+    let palabrita = word.value;    
+    for (let i = 0; i < palabrita.length; i++) {
+        if (!palabrita.charAt(i).match(/[a-z]/i)) {
+            flag = false
+        }        
+    }
+    if (flag == false) {
+        alert('La palabra ingresada solo debe tener letras')
+    }
+    else if (word.value == '') {
         alert('Por favor ingrese una palabra');
     }else if(listaPalabras.includes(word.value.toUpperCase())){
         alert('La palabra ingresada ya se encuentra en la lista')
     }
-    else{
+    else{        
         listaPalabras.push(word.value.toUpperCase());
         mostrarPalabrasAlmacenadas();
         word.value = '';
